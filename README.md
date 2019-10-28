@@ -1,4 +1,6 @@
 # java1-examples
+[![Build Status](https://travis-ci.org/fh-erfurt/java1-examples.svg?branch=master)](https://travis-ci.org/fh-erfurt/java1-examples)
+
 Example code showing things from the lecture in "real life"
 
 
