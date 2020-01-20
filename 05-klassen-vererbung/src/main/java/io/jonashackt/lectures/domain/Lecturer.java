@@ -15,4 +15,9 @@ public class Lecturer extends Person implements Employee {
     public AcademicGrade getAcademicGrade() {
         return this.academicGrade;
     }
+
+    @Override
+    public String getMitarbeiterId() {
+        return "Zentral-ID";
+    }
 }

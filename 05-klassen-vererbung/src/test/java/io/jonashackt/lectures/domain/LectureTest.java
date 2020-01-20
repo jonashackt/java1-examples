@@ -2,13 +2,17 @@ package io.jonashackt.lectures.domain;
 
 import org.junit.jupiter.api.Test;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class LectureTest {
 
     Student tom = new Student("Tom");
 
-    Lecturer norbert = new Lecturer("Prof.Dr. Norbert");
+    Lecturer norbert = new Lecturer("Prof. Dr. Norbert");
 
     @Test
     void a_student_should_be_able_to_apply_to_a_course() {
@@ -60,5 +64,37 @@ public class LectureTest {
         Lecturer noob = new Lecturer("Jonas");
 
         assertEquals(AcademicGrade.NOOB, noob.getAcademicGrade());
+    }
+
+    @Test
+    void no_object_of_class_person_possible() {
+        Person prof = new Lecturer("Norbert");
+
+        Lecturer lecturer = (Lecturer)prof;
+        AcademicGrade academicGrade = lecturer.getAcademicGrade();
+
+
+
+        ErfurterScriptEngineManager erfurterScriptEngineManager = new ErfurterScriptEngineManager();
+        erfurterScriptEngineManager.getEngineByName("tolle Engine");
+
+        Employee hausmeister = new FacilityManager("Moritz");
+        SuperEmployee max = new Student("Max");
+        Employee norbert = new Lecturer("Norbert");
+
+
+        List<Employee> employees = new ArrayList<Employee>();
+        employees.add(hausmeister);
+        employees.add(max);
+        employees.add(norbert);
+
+        max.getId();
+
+
+        hausmeister.getMitarbeiterId();
+
+
+
+        norbert.getMitarbeiterId();
     }
 }
