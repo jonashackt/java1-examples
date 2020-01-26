@@ -22,6 +22,7 @@
 	<modules>
         <module>03-sprachkonstrukte-1</module>
         <module>05-klassen-vererbung</module>
+		<module>10-java8</module>
     </modules>
 
 	<dependencies>
