@@ -12,6 +12,7 @@ public class FunctionalInterfacesTest {
     predicate_should_check_something() {
 
         // java.util.function.Predicate
+        // one parameter - and always return a boolean!
         Predicate<Integer> isGreaterThen5 = x -> x > 5;
 
         assertEquals(false, isGreaterThen5.test(4));
@@ -22,7 +23,7 @@ public class FunctionalInterfacesTest {
     function_should_apply_something_onto_a_parameter() {
 
         // java.util.function.Function
-        // String is the parameter, Integer is the return value
+        // one parameter, one return value
         Function<String, Integer> stringLength = string -> string.length();
 
         assertEquals(15, stringLength.apply("What the f***?!"));
