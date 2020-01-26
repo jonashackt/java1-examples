@@ -2,9 +2,7 @@ package io.jonashackt.lectures;
 
 import org.junit.jupiter.api.Test;
 
-import java.util.function.BinaryOperator;
-import java.util.function.Function;
-import java.util.function.Predicate;
+import java.util.function.*;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
@@ -39,5 +37,26 @@ public class FunctionalInterfacesTest {
 
         assertEquals(25, multiply.apply(5, 5));
         assertEquals(49, multiply.apply(7, 7));
+    }
+
+    @Test public void
+    supplier_should_create_something_out_of_nothing() {
+
+        // java.util.function.Supplier
+        // now we have NO parameters... and again one return value
+        Supplier<Person> personFactory = () -> new Person("The", "Terminator");
+
+        assertEquals("Terminator", personFactory.get().getLastName());
+    }
+
+
+    @Test public void
+    consumer_should_only_take_a_parameter_but_give_nothing_back() {
+
+        // java.util.function.Consumer
+        // now we have one parameter... but NO return value!
+        Consumer<String> printThisStringMan = string -> System.out.println(string);
+
+        printThisStringMan.accept("Print me, but don't assert me - just have a look into the console, right?! ");
     }
 }
