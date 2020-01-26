@@ -4,6 +4,8 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
+import java.util.List;
+import java.util.stream.Collectors;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
@@ -42,5 +44,15 @@ public class PersonTest {
         long count = persons.stream().filter(person -> "Monika".equals(person.getFirstName())).count();
 
         assertEquals(5, count);
+    }
+
+
+    @Test public void
+    should_create_a_normal_collection_out_of_our_stream_again() {
+
+        // Create a stream out of our Collection, use it, then gather a new Collection back from it...
+        List<Person> monikas = persons.stream().filter(person -> "Monika".equals(person.getFirstName())).collect(Collectors.toList());
+
+        assertEquals(5, monikas.size());
     }
 }
