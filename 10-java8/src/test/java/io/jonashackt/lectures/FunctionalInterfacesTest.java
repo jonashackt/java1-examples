@@ -25,6 +25,8 @@ public class FunctionalInterfacesTest {
         // java.util.function.Function
         // one parameter, one return value
         Function<String, Integer> stringLength = string -> string.length();
+        // the following would be exactly the same, just with the :: notation instead of string -> string
+        // Function<String, Integer> stringLength = String::length;
 
         assertEquals(15, stringLength.apply("What the f***?!"));
     }
