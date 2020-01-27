@@ -41,9 +41,11 @@ public class PersonTest {
     @Test public void
     should_count_persons_with_firstName_monika_with_java8_streams() {
 
-        long count = persons.stream().filter(person -> "Monika".equals(person.getFirstName())).count();
+        long countMonika = persons.stream().filter(person -> "Monika".equals(person.getFirstName())).count();
+        long countPaul = persons.stream().filter(person -> "Paul".equals(person.getFirstName())).count();
 
-        assertEquals(5, count);
+        assertEquals(5, countMonika);
+        assertEquals(1, countPaul);
     }
 
 
