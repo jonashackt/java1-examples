@@ -13,6 +13,7 @@ There's also a great introduction in the `projectreactor.io` documentation: http
 In short you could see the 
 
 `java.util.Observable` replaced by  `java.util.concurrent.Flow.Publisher`
+
 `java.util.Observer`   replaced by  `java.util.concurrent.Flow.Subscriber` 
 
 

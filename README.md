@@ -8,3 +8,5 @@ Example code showing things from the lecture in "real life"
 ### HowTo use this project
 
 Clone it, import as Maven project into IntelliJ (via [pom.xml](pom.xml)) and have fun :)
+
+Refer to the module's `README.md` files for more info about the specific topic. E.g. find the Design Patterns described in [09-ood-patterns/README.md](09-ood-patterns/README.md).
