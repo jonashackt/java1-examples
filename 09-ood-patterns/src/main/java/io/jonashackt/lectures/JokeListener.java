@@ -19,7 +19,7 @@ public class JokeListener implements Flow.Subscriber {
 
     @Override
     public void onSubscribe(Flow.Subscription subscription) {
-        System.out.println(name + " is now subsribed on " + subscription.toString());
+
     }
 
     @Override

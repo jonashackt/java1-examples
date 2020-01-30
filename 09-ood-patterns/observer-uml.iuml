@@ -1,0 +1,28 @@
+@startuml
+
+title Java9 version of Observer Pattern
+
+class ObserverPublishSubscriberTest
+
+class Flow.Subscriber {
+  +void onSubscribe(Flow.Subscription subscription)
+}
+
+class Flow.Publisher {
+  +void subscribe(Flow.Subscriber subscriber)
+}
+
+class JokeListener {
+  +String name
+}
+
+class JokeTeller {
+  +List<String> jokes
+  +void tellJoke()
+}
+
+Flow.Publisher <|-down- JokeTeller: implements
+Flow.Subscriber <|-down- JokeListener: implements
+JokeListener -- ObserverPublishSubscriberTest
+JokeTeller -- ObserverPublishSubscriberTest
+@enduml

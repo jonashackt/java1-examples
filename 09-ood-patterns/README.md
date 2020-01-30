@@ -10,10 +10,16 @@ See stackoverflow for more info https://stackoverflow.com/a/46563116/4964553
 
 There's also a great introduction in the `projectreactor.io` documentation: https://projectreactor.io/docs/core/release/reference/#intro-reactive
 
-In short you could see the 
+As usual, https://www.baeldung.com/java-9-reactive-streams is also worth the time.
+
+In short you think of both classes 
 
 `java.util.Observable` replaced by  `java.util.concurrent.Flow.Publisher`
 
 `java.util.Observer`   replaced by  `java.util.concurrent.Flow.Subscriber` 
 
+
+### Example design
+
+![example-uml](http://www.plantuml.com/plantuml/proxy?cache=no&src=https://raw.githubusercontent.com/jonashackt/java1-examples/master/09-ood-patterns/observer-uml.iuml)
 

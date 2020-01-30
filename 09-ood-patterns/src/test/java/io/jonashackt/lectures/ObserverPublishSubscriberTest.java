@@ -14,6 +14,11 @@ public class ObserverPublishSubscriberTest {
     @Test public void
     tell_some_jokes_or_die() {
 
+        /*
+         * This is an derivation of the Observer Pattern described in the `Java ist auch eine Insel` book
+         * http://openbook.rheinwerk-verlag.de/javainsel9/javainsel_10_002.htm
+         */
+
         // Somebody, who tells Jokes...
         JokeTeller max = new JokeTeller("Max, the Joker!");
 
@@ -32,10 +37,7 @@ public class ObserverPublishSubscriberTest {
 
         max.tellJoke();
 
-
-
-
-
+        // There's no unsubscribe in Reactive Streams, see https://stackoverflow.com/a/41486159/4964553
     }
 
 }
