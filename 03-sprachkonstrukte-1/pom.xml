@@ -5,7 +5,7 @@
 	<artifactId>03-sprachkonstrukte-1</artifactId>
 
 	<parent>
-		<groupId>de.jonashackt.lectures</groupId>
+		<groupId>io.jonashackt.lectures</groupId>
 		<artifactId>java1-examples</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
 	</parent>

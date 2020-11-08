@@ -1,4 +1,4 @@
-package de.jonashackt.lecture;
+package io.jonashackt.lecture;
 
 import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.Test;

@@ -1,4 +1,4 @@
-package de.jonashackt.lecture;
+package io.jonashackt.lecture;
 
 class Variable {
 
