@@ -15,17 +15,6 @@ public class LectureTest {
     Lecturer norbert = new Lecturer("Prof. Dr. Norbert");
 
     @Test
-    void a_student_should_be_able_to_apply_to_a_course() {
-        Student max = new Student("Maximilian");
-
-        Course javaProgramming1 = new Course("Program with Java Vol. 1", CourseType.WINTER, 6);
-
-        javaProgramming1.apply(max);
-
-        assertEquals(1, javaProgramming1.getNumberOfApplications());
-    }
-
-    @Test
     void student_and_lecturer_should_extend_person() {
 
         boolean tomIsAPerson = false;
@@ -64,6 +53,17 @@ public class LectureTest {
         Lecturer noob = new Lecturer("Jonas");
 
         assertEquals(AcademicGrade.NOOB, noob.getAcademicGrade());
+    }
+
+    @Test
+    void a_student_should_be_able_to_apply_to_a_course() {
+        Student max = new Student("Maximilian");
+
+        Course javaProgramming1 = new Course("Program with Java Vol. 1", CourseType.WINTER, 6);
+
+        javaProgramming1.apply(max);
+
+        assertEquals(1, javaProgramming1.getNumberOfApplications());
     }
 
     @Test
