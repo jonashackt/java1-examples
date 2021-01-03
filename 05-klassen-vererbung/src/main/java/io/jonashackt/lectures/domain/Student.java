@@ -1,12 +1,14 @@
 package io.jonashackt.lectures.domain;
 
-public class Student extends Person implements SuperEmployee {
+public class Student extends Person implements StudentEmployee {
 
     private int semester;
+    private SemesterTicket semesterTicket;
 
     public Student(String name) {
         super(name);
         semester = 1;
+        semesterTicket = new SemesterTicket();
     }
 
     public String getName() {
@@ -27,8 +29,8 @@ public class Student extends Person implements SuperEmployee {
     }
 
     @Override
-    public int getId() {
-        return 4711;
+    public SemesterTicket getSemesterTicket() {
+        return semesterTicket;
     }
 
     @Override

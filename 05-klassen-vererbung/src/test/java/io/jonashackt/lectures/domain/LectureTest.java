@@ -3,10 +3,10 @@ package io.jonashackt.lectures.domain;
 import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
 
 public class LectureTest {
 
@@ -39,6 +39,11 @@ public class LectureTest {
         tom.setCurrentSemester(3);
 
         assertEquals(3, tom.getCurrentSemester());
+    }
+
+    @Test
+    void student_should_get_semster_ticket() {
+        assertNotNull(tom.getSemesterTicket());
     }
 
     @Test
@@ -75,11 +80,9 @@ public class LectureTest {
 
 
 
-        ErfurterScriptEngineManager erfurterScriptEngineManager = new ErfurterScriptEngineManager();
-        erfurterScriptEngineManager.getEngineByName("tolle Engine");
 
         Employee hausmeister = new FacilityManager("Moritz");
-        SuperEmployee max = new Student("Max");
+        StudentEmployee max = new Student("Max");
         Employee norbert = new Lecturer("Norbert");
 
 
@@ -88,13 +91,15 @@ public class LectureTest {
         employees.add(max);
         employees.add(norbert);
 
-        max.getId();
-
+        max.getSemesterTicket();
 
         hausmeister.getMitarbeiterId();
 
-
-
         norbert.getMitarbeiterId();
+
+
+
+        ErfurterScriptEngineManager erfurterScriptEngineManager = new ErfurterScriptEngineManager();
+        erfurterScriptEngineManager.getEngineByName("tolle Engine");
     }
 }
