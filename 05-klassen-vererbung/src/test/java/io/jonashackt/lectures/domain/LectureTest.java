@@ -7,6 +7,7 @@ import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
 public class LectureTest {
 
@@ -73,13 +74,11 @@ public class LectureTest {
 
     @Test
     void no_object_of_class_person_possible() {
+
+
         Person prof = new Lecturer("Norbert");
 
         Lecturer lecturer = (Lecturer)prof;
-        AcademicGrade academicGrade = lecturer.getAcademicGrade();
-
-
-
 
         Employee hausmeister = new FacilityManager("Moritz");
         StudentEmployee max = new Student("Max");
@@ -101,5 +100,19 @@ public class LectureTest {
 
         ErfurterScriptEngineManager erfurterScriptEngineManager = new ErfurterScriptEngineManager();
         erfurterScriptEngineManager.getEngineByName("tolle Engine");
+    }
+
+    @Test
+    void should_have_prof_dr_as_academicGrade() {
+        // TODO: Enum
+    }
+
+    @Test
+    void lecturer_should_throw_exception_if_only_noob() {
+        Lecturer herbert = new Lecturer("Herbert");
+
+        // TODO: Try / catch example
+
+        // TODO: assertThrows example
     }
 }
