@@ -24,7 +24,7 @@ public class JokeListener implements Flow.Subscriber {
 
     @Override
     public void onNext(Object item) {
-        System.out.println(name + " is laughing out loud, because he got told the joke " + item.toString());
+        System.out.println(name + " is laughing out loud, because he got told the joke: '" + item.toString() + "'");
     }
 
     @Override

@@ -12,7 +12,7 @@ public class Lecturer extends Person implements Employee {
         this.academicGrade = academicGrade;
     }
 
-    public AcademicGrade getAcademicGrade() throws HasNoAcademicGradeException {
+    public AcademicGrade getAcademicGrade() {
         // TODO: Throw HasNoAcademicGradeException when Noob
         return this.academicGrade;
     }
